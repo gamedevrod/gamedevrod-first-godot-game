@@ -20,4 +20,6 @@ As músicas utilizadas são as do próprio tutorial. A seguir a lista com os lin
 - [Fonte pixelada](https://managore.itch.io/m3x6)
 
 ## Contato
-Fique a vontade para me seguir no meu [recém-criado Twitter](https://twitter.com/gamedevrod). Usarei ele como registro dos meus estudos de Godot. Em breve, criarei mais repositórios contendo meus experimentos na plataforma :)
+Fique a vontade para me seguir no meu [recém-criado Twitter](https://twitter.com/gamedevrod). Estou aberto a sugestões, dicas da plataforma, materiais de estudo, críticas, elogios, etc. 
+
+Esse Twitter será o registro dos meus estudos de Godot. Em breve, criarei mais repositórios contendo meus experimentos na plataforma e também pretendo desenvolver tutoriais em vídeo para ajudar iniciantes como eu a desenvolver seus próprios jogos :)
