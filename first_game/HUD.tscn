@@ -1,0 +1,78 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://HUD.gd" type="Script" id=2]
+[ext_resource path="res://fonts/m3x6.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+extra_spacing_char = 5
+font_data = ExtResource( 3 )
+fallback/0 = ExtResource( 1 )
+
+[sub_resource type="InputEventAction" id=2]
+action = "ui_select"
+
+[sub_resource type="ShortCut" id=3]
+shortcut = SubResource( 2 )
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="MessageLabel" type="Label" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -8.0
+margin_top = -100.0
+margin_right = -8.0
+margin_bottom = 59.0
+custom_fonts/font = SubResource( 1 )
+text = "Desvie das pedras pelo
+maior tempo possivel"
+align = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreLabel" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.133
+margin_left = -30.5
+margin_top = 16.0
+margin_right = 14.5
+margin_bottom = 14.2
+custom_fonts/font = SubResource( 1 )
+text = "0"
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="MessageTimer" type="Timer" parent="."]
+
+[node name="StartButton" type="Button" parent="."]
+anchor_left = 0.179188
+anchor_top = 0.835333
+anchor_right = 0.820188
+anchor_bottom = 0.835333
+margin_left = -7.48801
+margin_top = -21.2001
+margin_right = 360.128
+margin_bottom = 62.8001
+rect_scale = Vector2( 0.638027, 0.886148 )
+custom_fonts/font = SubResource( 1 )
+shortcut = SubResource( 3 )
+text = "Iniciar"
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+[connection signal="timeout" from="MessageTimer" to="." method="_on_MessageTimer_timeout"]
+[connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
